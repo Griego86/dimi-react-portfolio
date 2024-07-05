@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function AboutPage() {
+  useEffect(() => {
+    document.title = 'About | Dimi Athanasopoulos'
+  }, [])
+
   return (
     <main class="flex-1">
       <h1 class="text-3xl md:text-6xl py-10 text-center">About Me</h1>
@@ -10,7 +16,7 @@ export default function AboutPage() {
           a new software engineering journey, culminating in my graduation with
           a
           <a
-            class="font-extrabold hover:text-emerald-400"
+            class="font-extrabold hover:text-emerald-400 pl-1"
             href="https://www.lighthouselabs.ca/en/web-development"
           >
             Web Development diploma

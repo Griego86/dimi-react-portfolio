@@ -11,8 +11,8 @@ export function Router() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/dimi-react-portfolio" element={<HomePage />} />
+        <Route path="/dimi-react-portfolio/about" element={<AboutPage />} />
       </Route>
     )
   );

@@ -26,10 +26,10 @@ export default function Header() {
       <nav id="main-nav" class="md:text-2xl">
         <ul class="text-center font-bold md:flex">
           <li class="py-2 md:pl-2">
-            <NavLink to="">Home</NavLink>
+            <NavLink to="/dimi-react-portfolio/">Home</NavLink>
           </li>
           <li class="py-2 px-10">
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/dimi-react-portfolio/about">About</NavLink>
           </li>
           <li class="py-2">
             <NavLink to="">Contact</NavLink>
