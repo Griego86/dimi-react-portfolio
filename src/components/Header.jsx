@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header class="sticky top-0 z-50 bg-slate-800">
+    <header class="sticky block top-0 z-50 bg-slate-800">
       <div class="flex justify-between md:hidden">
         <NavLink class="py-2 px-2 text-lg font-bold" to="/">
           <svg
