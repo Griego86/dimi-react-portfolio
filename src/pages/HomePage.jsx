@@ -1,6 +1,8 @@
 import $ from "jquery";
 import ScrollReveal from "scrollreveal";
-import { FaPython, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaPython, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiMongodb } from "react-icons/si";
 import postgresLogo from "/Postgresql_elephant.svg";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
@@ -67,7 +69,7 @@ export default function HomePage() {
       </h2>
       <section class="py-10">
         <p class="text-lg md:text-2xl text-center">
-          Hi! I'm Dimi, NavLink full stack developer based in Vancouver, BC
+          Hi! I'm Dimi, a full stack web-developer based in Vancouver, BC
         </p>
         <p class="text-lg md:text-2xl text-center">
           Graduated Lighthouse Labs April 2024, and I build modern websites and
@@ -82,6 +84,9 @@ export default function HomePage() {
           </NavLink>
           <FaHtml5 size={75} className="mx-auto" />
           <FaCss3Alt size={75} className="mx-auto" />
+          <IoLogoJavascript size={75} className="mx-auto" />
+          <FaReact size={75} className="mx-auto" />
+          <SiMongodb size={75} className="mx-auto" />
           <img src={postgresLogo} alt="" class="py-2 w-[75px] mx-auto" />
           <img
             src="./images//python.svg"
