@@ -17,7 +17,7 @@ export default function ContactPage() {
           Whether you want to chat or have an idea for a project, feel free to send me an email!
         </p>
         <div class="text-base md:text-2xl text-center py-8">
-            <button className="border-solid border-2 border-sky-500 p-3 hover:bg-white hover:text-slate-800">Say Hello!</button>
+            <button className="border-solid rounded-md border-2 border-sky-500 p-3 hover:bg-white hover:text-slate-800">Say Hello!</button>
         </div>
       </main>
     </div>
