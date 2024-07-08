@@ -64,18 +64,18 @@ export default function HomePage() {
   return (
     <main class="flex-1">
       <h1 class="timeline-content js--fadeInRight text-3xl md:text-6xl pt-10 text-center">
-        Dimi Athanasopoulos
+        Hey, I'm Dimi 👋🏻 
       </h1>
-      <h2 class="timeline-content js--fadeInLeft text-xl md:text-4xl text-center py-2 md:py-4">
-        Full Stack Developer
+      <h2 class="timeline-content js--fadeInLeft text-xl md:text-5xl text-center py-2 md:py-4">
+      ...curious <button>👨🏻‍💻</button>?
       </h2>
       <section class="py-10">
         <p class="text-lg md:text-2xl text-center">
-          Hi! I'm Dimi, a full stack web-developer based in Vancouver, BC.
+          Hi! I'm Dimi Athanasopoulos, a full stack web-developer based in Vancouver, BC.
         </p>
         <p class="text-lg md:text-2xl text-center">
-          Graduated Lighthouse Labs April 2024, and I build modern websites and
-          webapps using React, Node and PostgreSQL.
+          I graduated Lighthouse Labs in April 2024, and I build modern websites and
+          webapps using React, Node and SQL.
         </p>
       </section>
       <section>
