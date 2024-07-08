@@ -7,9 +7,11 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiMongodb, SiExpress } from "react-icons/si";
 import postgresLogo from "/Postgresql_elephant.svg";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [visible, setVisible] = useState(true)
+
   useEffect(() => {
     document.title = 'Home | Dimi Athanasopoulos'
   }, [])
@@ -61,14 +63,17 @@ export default function HomePage() {
     });
   });
 
+  const handleStyle = { display: visible ? 'none' : '' }
+
   return (
     <main class="flex-1">
       <h1 class="timeline-content js--fadeInRight text-3xl md:text-6xl pt-10 text-center">
         Hey, I'm Dimi 👋🏻 
       </h1>
       <h2 class="timeline-content js--fadeInLeft text-xl md:text-5xl text-center py-2 md:py-4">
-      ...curious <button>👨🏻‍💻</button>?
+      ...curious <button onClick={() => setVisible(!visible)}>👨🏻‍💻</button>?
       </h2>
+      <div style={handleStyle}>
       <section class="py-10">
         <p class="text-lg md:text-2xl text-center">
           Hi! I'm Dimi Athanasopoulos, a full stack web-developer based in Vancouver, BC.
@@ -78,6 +83,7 @@ export default function HomePage() {
           webapps using React, Node and SQL.
         </p>
       </section>
+      </div>
       <section>
         <h2 class="text-xl md:text-4xl text-center">My Tech Stack</h2>
         <div class="py-10 md:grid grid-cols-5">
