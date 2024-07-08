@@ -6,6 +6,7 @@ import {
 import Layout from "./Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 export function Router() {
   const router = createBrowserRouter(
@@ -13,6 +14,7 @@ export function Router() {
       <Route element={<Layout />}>
         <Route path="/dimi-react-portfolio" element={<HomePage />} />
         <Route path="/dimi-react-portfolio/about" element={<AboutPage />} />
+        <Route path="/dimi-react-portfolio/contact" element={<ContactPage />} />
       </Route>
     )
   );

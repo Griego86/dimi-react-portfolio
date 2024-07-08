@@ -32,7 +32,7 @@ export default function Header() {
             <NavLink to="/dimi-react-portfolio/about">About</NavLink>
           </li>
           <li class="py-2">
-            <NavLink to="">Contact</NavLink>
+            <NavLink to="/dimi-react-portfolio/contact">Contact</NavLink>
           </li>
         </ul>
       </nav>
