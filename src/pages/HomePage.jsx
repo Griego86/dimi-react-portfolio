@@ -69,11 +69,11 @@ export default function HomePage() {
       </h2>
       <section class="py-10">
         <p class="text-lg md:text-2xl text-center">
-          Hi! I'm Dimi, a full stack web-developer based in Vancouver, BC
+          Hi! I'm Dimi, a full stack web-developer based in Vancouver, BC.
         </p>
         <p class="text-lg md:text-2xl text-center">
           Graduated Lighthouse Labs April 2024, and I build modern websites and
-          webapps using React, Node and PostgreSQL
+          webapps using React, Node and PostgreSQL.
         </p>
       </section>
       <section>
