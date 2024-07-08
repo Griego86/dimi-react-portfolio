@@ -34,6 +34,9 @@ export default function Header() {
           <li class="py-2">
             <NavLink to="/dimi-react-portfolio/contact">Contact</NavLink>
           </li>
+          <li class="py-2 px-10">
+            <a className="text-emerald-500" href="https://flowcv.com/resume/kaba3skben" target="_blank">Resume</a>
+          </li>
         </ul>
       </nav>
     </header>
