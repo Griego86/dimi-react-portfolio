@@ -1,8 +1,10 @@
 import $ from "jquery";
 import ScrollReveal from "scrollreveal";
-import { FaPython, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
+import { DiJqueryLogo } from "react-icons/di";
+import { SiPostman, SiPostgresql } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiExpress } from "react-icons/si";
 import postgresLogo from "/Postgresql_elephant.svg";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
@@ -80,19 +82,24 @@ export default function HomePage() {
         <h2 class="text-xl md:text-4xl text-center">My Tech Stack</h2>
         <div class="py-10 md:grid grid-cols-5">
           <NavLink to="https://www.python.org" target="_blank">
-            <FaPython size={75} className="mx-auto" />
+            <FaPython size={75} className="mx-auto hover:bg-red-500 rounded-md" />
           </NavLink>
-          <FaHtml5 size={75} className="mx-auto" />
+          <FaHtml5 size={75} className="mx-auto hover:bg-red-500 rounded-md" />
           <FaCss3Alt size={75} className="mx-auto" />
           <IoLogoJavascript size={75} className="mx-auto" />
           <FaReact size={75} className="mx-auto" />
           <SiMongodb size={75} className="mx-auto" />
-          <img src={postgresLogo} alt="" class="py-2 w-[75px] mx-auto" />
+          <FaNodeJs size={75} className="mx-auto" />
+          <SiExpress size={75} className="mx-auto" />
+          <DiJqueryLogo size={75} className="mx-auto" />
+          <SiPostman size={75} className="mx-auto" />
+          <SiPostgresql size={75} className="mx-auto" />
+          {/* <img src={postgresLogo} alt="" class="py-2 w-[75px] mx-auto" />
           <img
             src="./images//python.svg"
             alt=""
             class="py-2 w-[75px] mx-auto"
-          />
+          /> */}
         </div>
       </section>
     </main>
