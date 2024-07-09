@@ -71,10 +71,10 @@ export default function HomePage() {
         Hey, I'm Dimi 👋🏻 
       </h1>
       <h2 class="timeline-content js--fadeInLeft text-xl md:text-5xl text-center py-2 md:py-4">
-      ...curious <button onClick={() => setVisible(!visible)}>👨🏻‍💻</button>?
+      ...curious <button class="bg-slate-500 rounded-md px-1 hover:text-6xl" onClick={() => setVisible(!visible)}>👨🏻‍💻</button> ?
       </h2>
       <div style={handleStyle}>
-      <section class="py-10">
+      <section class="py-10 bg-emerald-600">
         <p class="text-lg md:text-2xl text-center">
           Hi! I'm Dimi Athanasopoulos, a full stack web-developer based in Vancouver, BC.
         </p>
@@ -84,22 +84,22 @@ export default function HomePage() {
         </p>
       </section>
       </div>
-      <section>
-        <h2 class="text-xl md:text-4xl text-center">My Tech Stack</h2>
+      <section class="bg-slate-600">
+        <h2 class="text-xl md:text-4xl text-center py-5">My Tech Stack</h2>
         <div class="py-10 md:grid grid-cols-5">
           <NavLink to="https://www.python.org" target="_blank">
-            <FaPython size={75} className="mx-auto hover:bg-red-500 rounded-md" />
+            <FaPython size={75} color="yellow" className="mx-auto hover:bg-blue-900 rounded-md" />
           </NavLink>
-          <FaHtml5 size={75} className="mx-auto hover:bg-red-500 rounded-md" />
-          <FaCss3Alt size={75} className="mx-auto" />
-          <IoLogoJavascript size={75} className="mx-auto" />
+          <FaHtml5 size={75} className="mx-auto hover:bg-orange-700 rounded-md" />
+          <FaCss3Alt size={75} className="mx-auto hover:bg-blue-700 rounded-md" />
+          <IoLogoJavascript color="black" size={75} className="mx-auto hover:bg-yellow-300 rounded-md" />
           <FaReact size={75} className="mx-auto" />
-          <SiMongodb size={75} className="mx-auto" />
-          <FaNodeJs size={75} className="mx-auto" />
-          <SiExpress size={75} className="mx-auto" />
-          <DiJqueryLogo size={75} className="mx-auto" />
-          <SiPostman size={75} className="mx-auto" />
-          <SiPostgresql size={75} className="mx-auto" />
+          <SiMongodb size={75} className="mx-auto p-2" />
+          <FaNodeJs color="green" size={75} className="hover:bg-white rounded-md mx-auto p-1" />
+          <SiExpress color="darkgrey" size={75} className="mx-auto hover:bg-black rounded-md p-2" />
+          <DiJqueryLogo color="darkblue" size={75} className="mx-auto hover:bg-slate-400 rounded-md" />
+          <SiPostman color="darkorange" size={75} className="mx-auto p-2 hover:bg-white rounded-md" />
+          <SiPostgresql size={75} className="mx-auto hover:bg-blue-900 rounded-md p-2" />
           {/* <img src={postgresLogo} alt="" class="py-2 w-[75px] mx-auto" />
           <img
             src="./images//python.svg"
