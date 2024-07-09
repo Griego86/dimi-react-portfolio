@@ -71,7 +71,7 @@ export default function HomePage() {
         Hey, I'm Dimi 👋🏻 
       </h1>
       <h2 class="timeline-content js--fadeInLeft text-xl md:text-5xl text-center py-2 md:py-4">
-      ...curious <button class="bg-slate-500 rounded-md px-1 hover:text-6xl" onClick={() => setVisible(!visible)}>👨🏻‍💻</button> ?
+      ...curious <button id="spin" class="bg-slate-500 rounded-xl px-1 hover:text-6xl" onClick={() => setVisible(!visible)}>👨🏻‍💻</button> ?
       </h2>
       <div style={handleStyle}>
       <section class="py-10 bg-emerald-600">
