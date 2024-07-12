@@ -8,7 +8,7 @@ export default function () {
             <FaGithub />
             <FaInstagram />
           </p>
-          <p class="text-center py-2">
+          <p className="text-center py-2">
             Copyright &copy;2024 Dimitrios Athanasopoulos
           </p>
         </footer>
