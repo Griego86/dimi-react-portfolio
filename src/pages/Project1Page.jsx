@@ -1,17 +1,21 @@
 import axios from "axios";
-import DOMAIN from "../services/endpont";
-import { useNavigate } from "react-router-dom";
+import DOMAIN from "../services/endpoint";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function Project1Page() {
+  const data = useLoaderData()
 
   const navigate = useNavigate()
   const [message, setMessage] = useState("")
 
   async function handleSubmit (e) {
-    const username = e.target.username.value
-    const comment = e.target.comment.value
-    const newComment = { username, comment }
+    let username = e.target.username.value
+    const content = e.target.content.value
+    if (username === "") {
+      username = "Anonymous"
+    }
+    const newComment = { username, content }
     const res = await axios.post(`${DOMAIN}/api/comments`, newComment)
     if (res?.data.success) {
       navigate('/dimi-react-portfolio/project1')
@@ -41,8 +45,8 @@ export default function Project1Page() {
           />
           <textarea
             type="text"
-            id="comment"
-            name="comment"
+            id="content"
+            name="content"
             placeholder="Write a comment!"
             className="my-5 py-2 px-2 rounded bg-slate-500 text-white"
           />
@@ -50,6 +54,20 @@ export default function Project1Page() {
         </form>
         {message}
       </section>
+      <section>
+        {data.map((comment) =>
+          <div className="border py-10 px-10 md:W-[1000px] mx-auto">
+            <p className="text-xl text-white font-bold">
+              {comment.username}
+            </p>
+          </div>
+          )}
+      </section>
     </main>
   );
+}
+
+export async function commentsLoader() {
+  const res = await axios.get(`${DOMAIN}/api/comments`)
+  return res.data
 }
