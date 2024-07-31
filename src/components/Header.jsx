@@ -112,7 +112,7 @@ export default function Header() {
                   Login
                 </NavLink>
               </li>}
-              <li className="py-2">
+              {user && <li className="py-2">
                 <NavLink
                   className="p-5"
                   onClick={logoutService}
@@ -120,7 +120,7 @@ export default function Header() {
                 >
                   Logout
                 </NavLink>
-              </li>
+              </li>}
               {!user && <li className="py-2">
                 <NavLink
                   className="text-emerald-500 p-5"

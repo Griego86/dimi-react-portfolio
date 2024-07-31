@@ -22,9 +22,11 @@ const LoginPage = () => {
 
     loginService(email, password);
 
-    if (!user) {
-      setMessage("invalid login credentials");
-    }
+    setTimeout(() => {
+      if (!user) {
+        setMessage("invalid login credentials");
+      }
+    }, 500)
   }
 
   return (
