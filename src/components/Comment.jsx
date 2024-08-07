@@ -1,12 +1,18 @@
 import { useState } from "react";
+import DOMAIN from "../services/endpoint";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Comment(props) {
   const [editMode, setEditMode] = useState(false);
+  const [editCommentContent, setEditCommentContent] = useState(props.content);
+
+  const navigate = useNavigate();
 
   async function handleDelete(e) {
     e.preventDefault();
-    const comment_id = e.target.commentid.value;
-    const res = await axios.post(`${DOMAIN}/api/commments/${comment_id}`, {
+    const comment_id = props.comment_id;
+    const res = await axios.post(`${DOMAIN}/api/comments/${comment_id}`, {
       comment_id,
     });
     if (res?.data.success) {
@@ -16,13 +22,17 @@ export default function Comment(props) {
     }
   }
 
-  async function handleEdit() {
+  async function handleEdit(e) {
     e.preventDefault();
     const content = e.target.content.value;
-    const comment_id = e.target.commentid.value;
+    const comment_id = props.comment_id;
     const newComment = { content, comment_id };
-    const res = await axios.put(`${DOMAIN}/api/comments`, newComment);
+    const res = await axios.put(
+      `${DOMAIN}/api/comments/${comment_id}`,
+      newComment
+    );
     if (res?.data.success) {
+      setEditMode(false);
       navigate("/dimi-react-portfolio/project1");
       setEditCommentContent("");
     } else {
@@ -41,25 +51,31 @@ export default function Comment(props) {
         <span className="text-gray-400">{props.created_at.slice(11, 19)}</span>
       </p>
       <p className="text-xl text-white font-bold">{props.content}</p>
-
-      {props.user && props.username === props.user?.username ? (
-        <div className="flex">
-          <div className="pr-5" onClick={() => setEditMode(true)}>
-            Edit
-          </div>
-          <form className="pl-5" onSubmit={handleDelete}>
-            <input
-              type="text"
-              className="hidden"
-              value={props.comment_id}
-              name="commentid"
-            />
-            <button>Delete</button>
-          </form>
-        </div>
-      ) : (
-        ""
-      )}
+      <div className="flex">
+      {props.user && <div className="pr-10">Reply</div>}
+        {props.user && props.username === props.user?.username ? (
+          <>
+            <div
+              className="pr-5 cursor-pointer"
+              onClick={() => setEditMode(true)}
+            >
+              Edit
+            </div>
+            <form className="pl-5" onSubmit={handleDelete}>
+              <input
+                type="text"
+                className="hidden"
+                value={props.comment_id}
+                name="commentid"
+              />
+              <button>Delete</button>
+            </form>
+          </>
+        ) : (
+          ""
+        )}
+       
+      </div>
       {editMode && (
         <form className="flex" onSubmit={handleEdit}>
           <input
@@ -67,6 +83,8 @@ export default function Comment(props) {
             type="text"
             name="content"
             id="content"
+            value={editCommentContent}
+            onChange={(e) => setEditCommentContent(e.target.value)}
           />
           <button className="mx-2">Edit</button>
           <button onClick={() => setEditMode(false)}>Cancel</button>

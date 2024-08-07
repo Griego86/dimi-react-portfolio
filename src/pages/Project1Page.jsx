@@ -12,7 +12,7 @@ export default function Project1Page() {
   const [message, setMessage] = useState("");
   const { user } = useAuthStore((state) => state);
   const [commentContent, setCommentContent] = useState("");
-  const [editCommentContent, setEditCommentContent] = useState("");
+  
   
 
   async function handleSubmit(e) {
