@@ -13,7 +13,7 @@ export default function Project1Page() {
   const { user } = useAuthStore((state) => state);
   const [commentContent, setCommentContent] = useState("");
   
-  
+  const test = ""
 
   async function handleSubmit(e) {
     e.preventDefault();
